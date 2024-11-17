@@ -1,0 +1,125 @@
+#container {
+    text-align: center;
+  
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  #container strong {
+    font-size: 20px;
+    line-height: 26px;
+  }
+  
+  #container p {
+    font-size: 16px;
+    line-height: 22px;
+  
+    color: #8c8c8c;
+  
+    margin: 0;
+  }
+  
+  #container a {
+    text-decoration: none;
+  }
+  
+  
+  /* Contenedor de los filtros */
+  .filter-container {
+    display: flex;
+    gap: 1.5rem; /* Espacio entre filtros */
+    align-items: center;
+    background-color: #1e1e1e;
+    padding: 0.5rem;
+    border-radius: 8px;
+    
+  }
+  
+  /* Estilo de los elementos de filtro */
+  ion-item {
+    --background: transparent;
+    color: #ffffff;
+  }
+  
+  ion-label, ion-input, ion-select {
+    color: #ffffff;
+  }
+  
+  /* Evitar el cambio de color al pasar el ratón sobre ion-label */
+  .genre-item:hover ion-label {
+    color: inherit; /* Mantiene el color actual (blanco en este caso) */
+    background-color: transparent; /* Elimina cualquier fondo que se pueda aplicar */
+  }
+  
+  /* Solo para el item del género */
+  .genre-item ion-label {
+    margin-right: 1rem; /* Ajusta el valor a tu preferencia */
+  }
+  
+  /* Ajuste de select e input para que ocupen el mismo espacio */
+  ion-input,
+  ion-select {
+    flex: 1;
+    max-width: 150px;
+    --placeholder-color: #ffffff88; /* Placeholder en color blanco semitransparente */
+  }
+  
+  ion-button {
+    //margin-left: auto;
+    float: right;
+  }
+  
+  
+  
+  /* Fondo oscuro */
+  ion-content {
+    --background: #121212; /* Fondo oscuro */
+    color: #ffffff;
+    padding: 1rem;
+  }
+  
+  /* Estilos para el grid de las tarjetas */
+  .movies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 1rem;
+  }
+  
+  /* Estilos de cada tarjeta */
+  ion-card {
+    background-color: #1e1e1e;
+    color: #ffffff; /* Color de texto blanco */
+    border-radius: 12px; /* Bordes más redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    padding: 0.5rem;
+    max-height: 250px; /* Altura máxima para que la tarjeta sea más compacta */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  /* Ajuste de la imagen */
+  ion-card img {
+    border-radius: 8px;
+    width: 100%;
+    height: 120px; /* Altura reducida de la imagen para un card más pequeño */
+    object-fit: cover;
+  }
+  
+  /* Estilos de título */
+  ion-card-title {
+    font-size: 1rem;
+    text-align: center;
+    margin: 0.5rem 0;
+    font-weight: bold;
+    color: #ffffff; /* Asegura que el texto sea blanco */
+  }
+  
+  
+  
+  
