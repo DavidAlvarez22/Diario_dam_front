@@ -49,10 +49,17 @@ export class ClasificacionService {
     return Object.keys(this.clasificaciones);
   }
 
-  eliminarPeliculaDeClasificacion(nombreClasificacion: string, index: number) {
+  /*eliminarPeliculaDeClasificacion(nombreClasificacion: string, index: number) {
     if (this.clasificaciones[nombreClasificacion]) {
       this.clasificaciones[nombreClasificacion].splice(index, 1);
     }
-  }
+  }*/
+    eliminarPeliculaDeClasificacion(clasificacion: string, index: number) {
+      // Asegúrate de que solo se elimine la película correspondiente a la clasificación y el índice específico
+      const peliculasClasificadas = this.clasificaciones[clasificacion]; // Obtener las películas de la clasificación
+      if (peliculasClasificadas && peliculasClasificadas.length > index) {
+        peliculasClasificadas.splice(index, 1); // Elimina solo la película seleccionada
+      }
+    }
 }
 

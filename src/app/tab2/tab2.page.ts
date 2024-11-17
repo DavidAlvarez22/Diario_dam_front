@@ -47,10 +47,13 @@ export class Tab2Page implements OnInit{
 
    // Método para eliminar una película por índice
    eliminarPelicula(index: number) {
-    this.peliculas.splice(index, 1); // Elimina la película de la lista visible
-    this.clasificacionService.eliminarPeliculaDeClasificacion(this.segmentoSeleccionado, index); // Elimina la película del servicio
+  // Verifica que el índice esté dentro de los límites del arreglo de películas
+  if (index >= 0 && index < this.peliculas.length) {
+    // Elimina solo la película en el índice proporcionado
+    this.peliculas = this.peliculas.filter((_, i) => i !== index);
+    this.clasificacionService.eliminarPeliculaDeClasificacion(this.segmentoSeleccionado, index);
   }
-
+}
  /*
  METODO PARA ABRIR EL MODA QUE YA TENEMOS. SE PUEDE ADAPTAR POR SI QUEREMOS OTRO
   async abrirModal(pelicula: any) {
