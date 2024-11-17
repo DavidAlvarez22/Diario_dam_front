@@ -32,8 +32,8 @@ export class ModalPage{
   }
   abrirGeolocalizacion(titulo : String) {
     this.carga.setTituloPeliculaSeleccionada(this.pelicula.titulo);
-    this.router.navigate(['/tabs/tab3']); // Navega a geo
-    this.modalController.dismiss(); // Cierra el modal al abrir la página de geolocalización
+    this.router.navigate(['/tabs/tab3']); 
+    this.modalController.dismiss(); 
   }
 
 }

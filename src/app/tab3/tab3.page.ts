@@ -112,15 +112,7 @@ export class Tab3Page implements OnInit,AfterViewInit{
       this.map.removeLayer(layer); // Solo eliminar los marcadores que no están en la lista de la capa
     }
   });
-
-  /*const selectedMovie = this.movies.find(movie => movie.title === this.selectedMovieTitle);
-  // Verificar si la película seleccionada tiene cines asociados
-  if (!selectedMovie || !selectedMovie.cinemas || selectedMovie.cinemas.length === 0) {
-    console.log(`No se encontraron cines para la película: ${this.selectedMovieTitle}`);
-    return; // No agregar marcadores si no se encuentran cines para la película seleccionada
-  }*/
-
-
+  
       let filteredCines = this.cines;
 
     // Si no se selecciona "Todas", filtrar los cines por la película seleccionada
