@@ -55,7 +55,7 @@ export class ClasificacionService {
     }
   }*/
     eliminarPeliculaDeClasificacion(clasificacion: string, index: number) {
-      // Asegúrate de que solo se elimine la película correspondiente a la clasificación y el índice específico
+      // NOs aseguramos de que solo se elimine la película correspondiente a la clasificación y el índice específico
       const peliculasClasificadas = this.clasificaciones[clasificacion]; // Obtener las películas de la clasificación
       if (peliculasClasificadas && peliculasClasificadas.length > index) {
         peliculasClasificadas.splice(index, 1); // Elimina solo la película seleccionada
